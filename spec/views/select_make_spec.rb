@@ -7,12 +7,4 @@ RSpec.describe 'seleciona marca', type: :feature do
     expect(page).to have_css('label', text: 'Escolha a Fabricante:')
     expect(page).to have_button('Buscar modelos')
   end
-
-  scenario 'quando selecionada e submetida' do
-    page.select 'SUBARU', from: 'webmotors_make_id'
-    click_button 'Buscar modelos'
-
-    expect(page).to have_css('a')
-    expect(page).to have_css('ul')
-  end
 end
